@@ -57,6 +57,19 @@ def find_cool(hashes)
   cool_hashes
 end 
 
+  # let(:cool) {
+  #   [
+  #           {
+  #                 :name => "ashley",
+  #           :temperature => "sort of cool"
+  #       },
+  #           {
+  #                 :name => "blake",
+  #           :temperature => "cool"
+  #       }
+  #   ]
+  # }
+
 def organize_schools(schools)
   locations = []
   organized_schools = Hash.new
