@@ -79,8 +79,16 @@ def organize_schools(schools)
   organized_schools
 end 
 
+def organize_schools(schools)
+  locations = []
+  organized_schools = Hash.new 
+  
+  schools.each do | key, data |
+    data.each do | 
+  end 
+end 
   # let(:schools) {
-  #   {
+  #     {
   #     "flatiron school bk" => {
   #       :location => "NYC"
   #     },
