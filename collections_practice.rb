@@ -92,7 +92,7 @@ def organize_schools(schools)
   
   locations = locations.uniq
   
-  locations.each do | location |
+  organized_schools.each do | location |
     
   end 
   organized_schools
