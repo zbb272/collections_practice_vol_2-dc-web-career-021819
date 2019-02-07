@@ -58,23 +58,22 @@ def find_cool(hashes)
 end 
 
 def organize_schools(schools)
-  locations = []
-  organized_schools = Hash.new
+  organized_schools = Hash.new 
   
-  schools.each do | school |
-    locations << school[1][:location]
-    organized_schools[school[1][:location]] = []
-  end 
-  
-  locations = locations.uniq
-  
-  schools.each do | school |
-    locations.each do | location |
-      if school[1][:location] == location 
-        organized_schools[location] << school[0]
-      end 
+  schools.each do | key, data |
+    data.each do | keys, location |
+      organized_schools[location] = []
     end 
   end 
   
+  organized_schools.each do | location, name_array |
+    schools.each do | key_name, data |
+      data.each do | key, location_string |
+        if location == location_string
+          organized_schools[location] << key_name
+        end 
+      end 
+    end 
+  end 
   organized_schools
 end 
