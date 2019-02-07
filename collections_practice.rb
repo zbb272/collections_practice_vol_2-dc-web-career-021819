@@ -94,7 +94,11 @@ def organize_schools(schools)
   
   organized_schools.each do | location, name_array |
     schools.each do | key_name, data |
-      data.each do | keys
+      data.each do | key, location_string |
+        if location == location_string
+          organized_schools[location] << key_name
+        end 
+      end 
     end 
   end 
   organized_schools
