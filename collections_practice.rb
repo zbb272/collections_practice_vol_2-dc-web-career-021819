@@ -92,8 +92,10 @@ def organize_schools(schools)
   
   locations = locations.uniq
   
-  organized_schools.each do | location |
-    
+  organized_schools.each do | location, name_array |
+    schools.each do | key_name, data |
+      data.each do | keys
+    end 
   end 
   organized_schools
 end 
