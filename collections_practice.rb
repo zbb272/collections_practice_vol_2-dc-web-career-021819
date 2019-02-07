@@ -80,17 +80,13 @@ end
 # end 
 
 def organize_schools(schools)
-  # locations = []
   organized_schools = Hash.new 
   
   schools.each do | key, data |
     data.each do | keys, location |
-      # locations << location 
       organized_schools[location] = []
     end 
   end 
-  
-  # locations = locations.uniq
   
   organized_schools.each do | location, name_array |
     schools.each do | key_name, data |
