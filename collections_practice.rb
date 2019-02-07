@@ -49,9 +49,9 @@ end
 
 def find_cool(hashes)
   cool_hashes = []
-  hashes.each do | key, value |
-    if value == "cool"
-      cool_hashes << key 
+  hashes.each do | hash |
+    if hash[:temperature] == "cool"
+      cool_hashes << hash 
     end 
   end 
   cool_hashes
