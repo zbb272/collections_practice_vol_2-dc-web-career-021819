@@ -84,8 +84,18 @@ def organize_schools(schools)
   organized_schools = Hash.new 
   
   schools.each do | key, data |
-    data.each do | 
+    data.each do | keys, location |
+      locations << location 
+      organized_schools[location] = []
+    end 
   end 
+  
+  locations = locations.uniq
+  
+  locations.each do | location |
+    
+  end 
+  organized_schools
 end 
   # let(:schools) {
   #     {
